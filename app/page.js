@@ -1,13 +1,16 @@
-export default function Home() {
+import NewUserForm from "./components/users/NewUserForm";
+import User from "./components/users/User";
+import UserList from "./components/users/UserList";
+
+export default async function Home() {
     return (
-        <div>
-            <h1>Next.js Rendering process</h1>
-            <div className="mt-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                aperiam rerum expedita soluta cupiditate maiores excepturi
-                exercitationem, veniam corrupti praesentium pariatur quas dolor
-                iste dolores! Magni, adipisci excepturi. Nam, harum.
-            </div>
+        <div className="py-8">
+            <h1 className="text-gray-800">USER REGISTRATION</h1>
+            <NewUserForm />
+            <User />
+            <UserList />
+            <User />
+            <User />
         </div>
     );
 }

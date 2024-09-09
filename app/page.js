@@ -1,16 +1,33 @@
-import NewUserForm from "./components/users/NewUserForm";
-import User from "./components/users/User";
-import UserList from "./components/users/UserList";
+import devinImage from "@/public/assets/images/devin.jpg";
+import Image from "next/image";
 
-export default async function Home() {
-    return (
-        <div className="py-8">
-            <h1 className="text-gray-800">USER REGISTRATION</h1>
-            <NewUserForm />
-            <User />
-            <UserList />
-            <User />
-            <User />
-        </div>
-    );
+export default function Home() {
+  return (
+    <div>
+      <h1>Next.js Image Optimization</h1>
+
+      {/* <div className="mt-4 relative w-[800px] h-[400px] border-2 border-teal-300 overflow-hidden">
+                <Image
+                    placeholder="blur"
+                    fill
+                    src={devinImage}
+                    alt="Will devin replace Programmers?"
+                    className="object-cover"
+                />
+            </div> */}
+      <div className="mt-4">
+        <Image
+          src={"/assets/images/devin.jpg"}
+          alt="Devin Image"
+          width="500"
+          height={"500"}
+        />
+        <Image src={devinImage} alt="Devin Image" />
+      </div>
+
+      <div className="w-96">
+        <Image src={devinImage} alt="Devin Image" />
+      </div>
+    </div>
+  );
 }

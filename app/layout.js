@@ -1,18 +1,17 @@
+import { Inter } from "next/font/google";
 import "./globals.css";
 
+const inter = Inter({ subsets: ["latin"] });
+
 export const metadata = {
-    title: "Server Actions",
-    description: "Next.js Server Action Example",
+    title: "Rendering",
+    description: "Understanding Next.js Rendering process",
 };
 
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body className="bg-gray-200 px-5">
-                <main className="mx-auto rounded bg-white max-w-5xl px-5 min-h-[100dvh]">
-                    {children}
-                </main>
-            </body>
+            <body className={inter.className}>{children}</body>
         </html>
     );
 }
